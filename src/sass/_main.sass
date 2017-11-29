@@ -1,0 +1,73 @@
+
+body
+	background-color: #454545
+
+.header
+	min-height: 50px	
+	background-color: #222222
+	color: #ffffff
+	&__title
+		text-align: center
+		vertical-align: middle
+		font-weight: 500
+		font-size: 34px
+		font-family: monospace
+		
+
+.tabs
+	margin: 25px auto
+	max-width: 80%
+	text-align: center
+	padding: 5px
+	&__list 
+	&__item
+		display: inline-block
+		font-size: 16px
+		font-family: monospace
+		font-weight: 400
+		// padding: 10px 16px
+		border-radius: 8px
+		background-color: #323232
+		color: #fefefe
+		border: 1px solid #ddd
+	&__link
+		display: inline-block
+		color: inherit	
+		text-decoration: none
+		cursor: pointer
+		padding: 10px 16px
+		border-radius: 8px
+		&.is-active
+			background-color: tomato
+
+
+.heroes
+	&__item
+		min-height: 600px
+		max-width: 800px
+		margin: 25px auto
+
+.block
+	display: none
+	min-height: 600px
+	border-radius: 3px
+	box-shadow: 0px 0px 8px 2px #ddd
+	min-height: 600px
+	&.is-active
+		display: block
+	&_zoro
+		+image("zoro.jpg")
+		+cover
+	&_bulba
+		+image("bulba.jpg")
+		+cover
+	&_zatoichi
+		+image("zatoichi.jpg")
+		+cover
+	&_kichot
+		+image("kichot.jpg")
+		+cover
+	&_ph
+		+image("ph.jpg")
+		+cover		
+
