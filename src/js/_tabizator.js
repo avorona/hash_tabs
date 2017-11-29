@@ -54,8 +54,6 @@ export default class Tabizator {
 
       el.addEventListener('click', function(e) {
 
-        // e.preventDefault();
-
         let t = e.currentTarget;
         let data = t.getAttribute('data-href');
 
@@ -75,11 +73,8 @@ export default class Tabizator {
   _hashChanged() {
 
     let self=this;
-    // let all=self.tabs.all;
-    // let target=self.tabs.current;
 
     window.addEventListener('hashchange', function(e) {
-
 
       self._showContent();
       self._toggleState();
@@ -89,14 +84,10 @@ export default class Tabizator {
     
   }
 
-
   /// EVENTS END
-
   
 
   _toggleState() {
-
-    // if (target === undefined || all === undefined) return false;
 
     let self=this;
     let hash = window.location.hash.replace('#', '');
@@ -114,18 +105,13 @@ export default class Tabizator {
         el.classList.remove('is-active');
       });
       target.classList.add('is-active');
-      // console.log(hash, target);
+
     } else {
      
       return false;
     }
    
-
-
- 
-
   }
-
 
 
   _changeHash() {
@@ -153,9 +139,6 @@ export default class Tabizator {
       window.location.href = newLoc;
 
     }
-  
-
-    // console.log(a);
 
   }
 
@@ -180,7 +163,7 @@ export default class Tabizator {
     if (hash) {
 
       let current = content.find(el => {
-        console.log(el);
+        // console.log(el);
         if (el.getAttribute('data-content') === hash) return el;
       });
 
@@ -189,7 +172,7 @@ export default class Tabizator {
     } else {
 
       let ph = content.find(el => {
-        console.log(el);
+        // console.log(el);
         if (el.getAttribute('data-content') === 'ph') return el;
       });
 
@@ -197,9 +180,6 @@ export default class Tabizator {
 
     }
     
-    
   }
-
-
 
 }
